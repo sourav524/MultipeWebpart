@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "hello-world-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
+          "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json"
+        }
+      ]
+    },
+    "command-set-azure-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/commandSetAzure/CommandSetAzureCommandSet.js",
+          "manifest": "./src/extensions/commandSetAzure/CommandSetAzureCommandSet.manifest.json"
+        }
+      ]
+    },
+    "hello-world-library": {
+      "components": [
+        {
+          "entrypoint": "./lib/libraries/helloWorld/HelloWorldLibrary.js",
+          "manifest": "./src/libraries/helloWorld/HelloWorldLibrary.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js",
+    "CommandSetAzureCommandSetStrings": "lib/extensions/commandSetAzure/loc/{locale}.js",
+    "HelloWorldLibraryStrings": "lib/libraries/helloWorld/loc/{locale}.js"
+  }
+}
